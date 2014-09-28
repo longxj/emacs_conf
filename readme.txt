@@ -10,7 +10,7 @@ emacs compile:
 5. make
 6. su make install
 
-setup step:
+emacs config files setup step:
 1. unpack emacs.d.tar.gz to ~/.emacs.d
 2. mv emacs_conf.txt ~/.emacs
 3. cd ~/.emacs.d/helm
