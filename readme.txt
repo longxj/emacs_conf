@@ -6,7 +6,7 @@ emacs compile:
 1. unpack emacs.tar.gz ~/
 2. mv emacs.d/ .emacs.d/
 3. cd ~/.emacs.d
-4. ./configure 
+4. ./configure
 5. make
 6. su make install
 
