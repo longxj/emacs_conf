@@ -1,3 +1,4 @@
+(setq stack-trace-on-error t)
 (setq make-backup-files nil)
 (setq shell-file-name "bash")
 (setenv "SHELL" shell-file-name)
@@ -7,7 +8,7 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-(setq bookmark-save-flag 1) 
+(setq bookmark-save-flag 1)
 (setq bookmark-default-file  (substitute-in-file-name "$BMKNAME"))
 
 ;; display line number
@@ -16,9 +17,21 @@
 
 (require 'xcscope)
 
+;; helm
+(add-to-list 'load-path "~/.emacs.d/helm")
+(require 'helm-config)
+(require 'helm-grep)
+
+(global-set-key (kbd "C-c h") 'helm-command-prefix) ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+(global-unset-key (kbd "C-x c"))
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+(helm-mode 1)
+
 (global-set-key "\C-ci" 'cscope-find-files-including-file)
 (global-set-key "\C-cf" 'cscope-find-this-file)
-(global-set-key "\C-cg" 'cscope-find-egrep-pattern) 
+(global-set-key "\C-cg" 'cscope-find-egrep-pattern)
 (global-set-key "\C-ct" 'cscope-find-this-text-string)
 (global-set-key "\C-cr" 'cscope-find-this-symbol)
 (global-set-key "\C-cd" 'cscope-find-global-definition)
@@ -61,9 +74,6 @@
 
 
 (minibuffer-electric-default-mode 1)
-
-(partial-completion-mode 1)
-
 (icomplete-mode 1)
 
 ;;Display the pictures in Emacs
@@ -164,7 +174,7 @@
 (setq default-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8) 
+(set-keyboard-coding-system 'utf-8)
 
 (set-language-environment "UTF-8")
 (set-terminal-coding-system 'utf-8)
@@ -193,9 +203,9 @@
 (global-set-key "\C-q" 'query-replace-regexp)
 
 ;;cedet
-(load-file "~/.emacs.d/cedet-1.0pre7/common/cedet.el")
+(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
 (global-ede-mode 1)                      ; Enable the Project management system
-(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
+(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
 
 ;;(semantic-load-enable-excessive-code-helpers)
@@ -210,14 +220,10 @@
 (require 'ecb)
 (require 'ecb-autoloads)
 
-;;(global-set-key "\C-cd" 'ecb-goto-window-directories)
-;;(global-set-key "\C-cd" 'ecb-goto-window-sources)
 (global-set-key "\C-cm" 'ecb-goto-window-methods)
 (global-set-key "\C-ce" 'ecb-goto-window-edit1)
 
 (ecb-layout-define "mylayout" left
-  (ecb-set-sources-buffer)
-  (ecb-split-ver 0.3)
   (ecb-set-methods-buffer)
   (select-window (next-window)))
 
@@ -252,7 +258,6 @@
             ;; Set dired-x buffer-local variables here.  For example:
             ;; (dired-omit-mode 1)
             ))
-            
+
 (require 'color-theme)
-(color-theme-initialize)            
-;;(color-theme-gray30)
+(color-theme-initialize)
