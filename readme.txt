@@ -1,5 +1,5 @@
 env prepare:
-1. install ncurse_deval
+1. install ncurse_devel
 2. install gcc
 
 emacs compile:
