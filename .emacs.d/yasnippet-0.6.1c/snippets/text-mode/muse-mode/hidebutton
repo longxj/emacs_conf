@@ -1,0 +1,13 @@
+#contributor : fortitude.zhang <fortitude.zhang@gmail.com>
+#name : hidebutton
+# --
+<literal>
+<span class="showhide_button" onclick="javascript:ShowHideByName('xxx')" name="xxx__button" id="xxx__button">▶</span>
+<div style="display:inline;" class=""><h4>xxx</h4></div>
+<div class="stylepoint_body" name="xxx__body" id="xxx__body" style="display: none">
+</literal>
+TODO: replace xxx and fill content
+<literal>
+</div>
+<br>
+</literal>
