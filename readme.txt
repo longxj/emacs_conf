@@ -11,7 +11,7 @@ emacs compile:
 6. su make install
 
 emacs config files setup step:
-1. unpack emacs.d.tar.gz to ~/.emacs.d
+1. mv .emad.d/ ~/.emacs.d
 2. mv emacs_conf.txt ~/.emacs
 3. cd ~/.emacs.d/helm
 4. make
