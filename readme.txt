@@ -11,7 +11,7 @@ emacs compile:
 6. su make install
 
 emacs config files setup step:
-1. mv .emad.d/ ~/.emacs.d
+1. mv .emacs.d/ ~/.emacs.d
 2. mv emacs_conf.txt ~/.emacs
 3. cd ~/.emacs.d/helm
 4. make
@@ -19,3 +19,7 @@ emacs config files setup step:
 6. make EMACS=emacs
 7. cd ~/.emacs.d/ecb-2.40
 8. make CEDET=../cedet-1.1
+
+simple setup:
+1. mv emacs_conf.txt ~/.emacs
+2. mv .emacs.d/ ~/.emacs.d
