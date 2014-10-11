@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003 Vladimir G. Sekissov
 
-;; Author: sean <sean@localhost.localdomain>
-;; Created: 2014-09-28 13:35:14+0800
+;; Author: centos6.5 <sean@localhost.localdomain>
+;; Created: 2014-10-11 16:14:58-0700
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

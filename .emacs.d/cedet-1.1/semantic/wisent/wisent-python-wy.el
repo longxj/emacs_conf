@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003, 2004, 2007, 2012 Richard Kim
 
-;; Author: sean <sean@localhost.localdomain>
-;; Created: 2014-09-28 13:35:11+0800
+;; Author: centos6.5 <sean@localhost.localdomain>
+;; Created: 2014-10-11 16:09:13-0700
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

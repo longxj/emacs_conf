@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2008 Free Software Foundation
 
-;; Author: sean <sean@localhost.localdomain>
-;; Created: 2014-09-28 13:35:26+0800
+;; Author: centos6.5 <sean@localhost.localdomain>
+;; Created: 2014-10-11 16:15:05-0700
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
