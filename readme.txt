@@ -23,3 +23,5 @@ emacs config files setup step:
 simple setup:
 1. mv emacs_conf.txt ~/.emacs
 2. mv .emacs.d/ ~/.emacs.d
+3. cd ~/.emacs.d/helm
+4. make
