@@ -29,6 +29,7 @@
 (global-set-key "\C-cr" 'cscope-find-this-symbol)
 (global-set-key "\C-cd" 'cscope-find-global-definition)
 (global-set-key "\C-cu" 'cscope-pop-mark)
+(setq cscope-initial-directory default-directory)
 
 (set-face-background 'region "white")
 
@@ -50,8 +51,27 @@
 (global-set-key [f1] 'ecb-activate)
 (global-set-key [f4] 'ecb-deactivate)
 (global-set-key [f3] 'goto-line)
-(global-set-key [f7] 'compile)
+(defun mycompile()
+  "mycompile"
+  (interactive)
+  (cd cscope-initial-directory)
+  (call-interactively 'compile)
+)
+(global-set-key [f7] 'mycompile)
+(defun mygdb()
+  "mygdb"
+  (interactive)
+  (cd cscope-initial-directory)
+  (call-interactively 'gdb)
+)
 (global-set-key [f5] 'gdb)
+(defun gotocompilebuffer()
+  "gotocompilebuffer"
+  (interactive)
+  (setq cb (get-buffer-create "*compilation*"))
+  (switch-to-buffer cb)
+)
+(global-set-key [f6] 'gotocompilebuffer)
 (global-set-key [f2] 'eassist-switch-h-cpp)
 
 ;; delete blank at tail of line
