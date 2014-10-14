@@ -64,7 +64,7 @@
   (cd cscope-initial-directory)
   (call-interactively 'gdb)
 )
-(global-set-key [f5] 'gdb)
+(global-set-key [f5] 'mygdb)
 (defun gotocompilebuffer()
   "gotocompilebuffer"
   (interactive)
