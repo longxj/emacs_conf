@@ -25,3 +25,8 @@ simple setup:
 2. mv .emacs.d/ ~/.emacs.d
 3. cd ~/.emacs.d/helm
 4. make
+
+todo:
+find ./ -type f -iname "*.h" >cscope.files
+find ./ -type f -iname "*.cpp" >>cscope.files
+cscope -bq
