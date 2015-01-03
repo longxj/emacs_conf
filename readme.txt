@@ -27,9 +27,4 @@ simple setup:
 4. make
 
 problem:
-f5 gdb -i=mi has some problem, use M-x gud-gdb    gdb --fullname xxx 
-
-todo:
-find ./ -type f -iname "*.h" >cscope.files
-find ./ -type f -iname "*.cpp" >>cscope.files
-cscope -bq
+f5 gdb -i=mi has some problem, use M-x gud-gdb    gdb --fullname xxx
