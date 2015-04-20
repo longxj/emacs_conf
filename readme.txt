@@ -4,11 +4,10 @@ env prepare:
 
 emacs compile:
 1. unpack emacs.tar.gz ~/
-2. mv emacs.d/ .emacs.d/
-3. cd ~/.emacs.d
-4. ./configure
-5. make
-6. su make install
+2. cd emacs-24.3/
+3. ./configure
+4. make
+5. su make install
 
 emacs config files setup step:
 1. mv .emacs.d/ ~/.emacs.d
