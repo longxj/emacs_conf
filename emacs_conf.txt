@@ -9,6 +9,14 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
+;; window-numbering
+(require 'window-numbering)
+(window-numbering-mode 1)
+
+(winner-mode 1)
+(global-set-key (kbd "C-x 4 u") 'winner-undo)
+(global-set-key (kbd "C-x 4 r") 'winner-redo)
+
 ;; helm
 (add-to-list 'load-path "~/.emacs.d/helm")
 (require 'helm-config)
@@ -155,16 +163,16 @@
 
 ;;cedet
 (load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
-(global-ede-mode 1)                      ; Enable the Project management system
-(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
-(global-srecode-minor-mode 1)            ; Enable template insertion menu
+;;(global-ede-mode 1)                      ; Enable the Project management system
+;;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
+;;(global-srecode-minor-mode 1)            ; Enable template insertion menu
 
 ;;(semantic-load-enable-excessive-code-helpers)
 
-(defun my-c-mode-cedet-hook ()
-  (local-set-key "." 'semantic-complete-self-insert)
-  (local-set-key ">" 'semantic-complete-self-insert))
-(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+;;(defun my-c-mode-cedet-hook ()
+;;  (local-set-key "." 'semantic-complete-self-insert)
+;;  (local-set-key ">" 'semantic-complete-self-insert))
+;;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
 ;;ecb
 (add-to-list 'load-path "~/.emacs.d/ecb-2.40")
