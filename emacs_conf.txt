@@ -171,49 +171,6 @@
 ;;bind the query-replace
 (global-set-key "\C-q" 'query-replace-regexp)
 
-;;cedet
-(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
-;;(global-ede-mode 1)                      ; Enable the Project management system
-;;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion
-;;(global-srecode-minor-mode 1)            ; Enable template insertion menu
-
-;;(semantic-load-enable-excessive-code-helpers)
-
-;;(defun my-c-mode-cedet-hook ()
-;;  (local-set-key "." 'semantic-complete-self-insert)
-;;  (local-set-key ">" 'semantic-complete-self-insert))
-;;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
-
-;;ecb
-(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
-(require 'ecb)
-(require 'ecb-autoloads)
-
-(global-set-key "\C-cm" 'ecb-goto-window-methods)
-(global-set-key "\C-ce" 'ecb-goto-window-edit1)
-
-(ecb-layout-define "mylayout" left
-  (ecb-set-methods-buffer)
-  (select-window (next-window)))
-
-(setq ecb-tree-indent 1)
-(setq ecb-windows-width 0.2)
-(setq ecb-compile-window-height 10)
-(setq ecb-layout-name "mylayout")
-
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40"))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
-
 ;; load dired-x
 (add-hook 'dired-load-hook
           (lambda ()
